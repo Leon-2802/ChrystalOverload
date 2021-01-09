@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+    public bool shield = false;
 
     private Vector2 movement;
 
@@ -37,10 +38,14 @@ public class PlayerMovement : MonoBehaviour
 
         safeLastMove();
 
-        if(Input.GetKeyDown(KeyCode.K))
+        if(Input.GetButton("Fire1"))
         {
-            animator.SetBool("Attack", true); //Attack wird ausgelöst
+            animator.SetBool("Block", true); //Block wird ausgelöst
         }
+        if(Input.GetButtonUp("Fire1"))
+        {
+            animator.SetBool("Block", false);
+        } 
 
         if(Input.GetKeyDown(KeyCode.J))
         {
@@ -65,9 +70,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-       if(animator.GetBool("Attack") == true)
+       if(animator.GetBool("Block") == true)
        {
-           rb.velocity = Vector2.zero; //Während Attack kein Laufen möglich
+           rb.velocity = Vector2.zero; //Während Block kein Laufen möglich
        }
        else if(animator.GetBool("Shoot") == true)
        {
@@ -81,12 +86,6 @@ public class PlayerMovement : MonoBehaviour
        {
             rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
        }
-    }
-
-    void StopAttack()
-    {
-        if(animator.GetBool("Attack")) //Am Ende der Attack-Animation über Event getriggert -> Attack beendet
-            animator.SetBool("Attack", false);
     }
 
     void StopShoot()

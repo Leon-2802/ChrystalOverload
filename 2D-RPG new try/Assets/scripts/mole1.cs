@@ -33,6 +33,9 @@ public class mole1 : enemy
 
     void FixedUpdate()
     {
+        if(currentHealth <= 0)
+            return;
+
         checkDistance();
         controlAttack();
     }
@@ -43,9 +46,17 @@ public class mole1 : enemy
         {
             currentHealth -= 25;
 
-            animator.SetBool("isHurt", true);
-            enemyRage = true;
-            StartCoroutine(backToIdle());
+            if(currentHealth <= 0)
+            {
+                Die();
+            }
+            else 
+            {
+                animator.SetBool("isHurt", true);
+                enemyRage = true;
+                StartCoroutine(backToIdle());
+            }
+            
 
             /*Knockback
             if (rigidEnemy != null)
@@ -57,10 +68,7 @@ public class mole1 : enemy
             StartCoroutine(knockStop(rigidEnemy));
             } */
 
-            if(currentHealth <= 0)
-            {
-                Die();
-            }
+            
         }
     }
 
@@ -68,7 +76,7 @@ public class mole1 : enemy
     {
         animator.SetBool("isDead", true);
         StartCoroutine(enemyDead());
-        this.enabled = false;
+        //this.enabled = false;
     }
     private IEnumerator enemyDead()
     {
@@ -115,6 +123,7 @@ public class mole1 : enemy
     {
         if(Vector2.Distance(target.position, transform.position) <= attackRadius && canAttack == true)
         {
+            animator.SetBool("inRange", true);
             StartCoroutine(hitInterval());
         }
         else if(playerHealth <= 0)
@@ -126,19 +135,25 @@ public class mole1 : enemy
     public IEnumerator hitInterval()
     {
         canAttack = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
         if(Vector2.Distance(target.position, transform.position) <= attackRadius)
-        {
-            playerHealth -= 20;
-            playerAnimator.SetBool("isHurt", true);
+        {   
             animator.SetBool("attack", true);
             enemyRage = false;
-            StartCoroutine(backtoPlayerIdle());
             StartCoroutine(attackToIdle());
+
+            if(playerAnimator.GetBool("Block") == false)
+            {
+                playerHealth -= 20;
+                playerAnimator.SetBool("isHurt", true);
+                StartCoroutine(backtoPlayerIdle());
+            }
+
         }
         else {
             canAttack = true;
+            animator.SetBool("inRange", false);
         }
     }
 
@@ -152,5 +167,10 @@ public class mole1 : enemy
     {
         yield return new WaitForSeconds(0.2f);
         animator.SetBool("attack", false);
+        animator.SetBool("inRange", false);
+        if(playerAnimator.GetBool("Block") == true)
+        {
+            canAttack = true;
+        }
     }
 }
