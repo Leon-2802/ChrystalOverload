@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public float moveSpeed = 5f;
-
     public Rigidbody2D rb;
     public Animator animator;
-    public bool shield = false;
 
     private Vector2 movement;
 
@@ -92,8 +89,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(animator.GetBool("Shoot"))
             animator.SetBool("Shoot", false);
-    }
-
-    
+    }  
 }   
 

@@ -2,15 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mole1 : enemy
 {
     public GameObject Enemy1;
     public Rigidbody2D rigidEnemy;
+    public Rigidbody2D rigidPlayer;
     public Animator animator;
     public Animator playerAnimator;
     int currentHealth;
-    public int playerHealth = 100;
+    public int playerCurrentHealth;
+    public healthbar playerHealthbar;
     private bool canAttack = true;
     private bool enemyRage = false;
 
@@ -25,13 +28,16 @@ public class mole1 : enemy
     public float knockTime;
     private Vector2 difference; */
 
-    void Start() 
+    private void Start() 
     {
         currentHealth = maxHealth;
+        playerCurrentHealth = maxHealth;
+        playerHealthbar.SetMaxHealth(maxHealth);
+
         target = GameObject.FindWithTag("Player").transform;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if(currentHealth <= 0)
             return;
@@ -40,7 +46,7 @@ public class mole1 : enemy
         controlAttack();
     }
 
-    void OnCollisionEnter2D(Collision2D collision) 
+    private void OnCollisionEnter2D(Collision2D collision) 
     {
         if(collision.collider.CompareTag("arrow"))
         {
@@ -72,9 +78,10 @@ public class mole1 : enemy
         }
     }
 
-    void Die()
+    private void Die()
     {
         animator.SetBool("isDead", true);
+        rigidEnemy.velocity = Vector2.zero;
         StartCoroutine(enemyDead());
         //this.enabled = false;
     }
@@ -99,7 +106,7 @@ public class mole1 : enemy
         }
     } */
 
-    public void checkDistance()
+    private void checkDistance()
     {
         if(Vector2.Distance(target.position, transform.position) <= detectRadius && Vector2.Distance(target.position, transform.position) > stopRadius || enemyRage == true)
         {
@@ -119,20 +126,23 @@ public class mole1 : enemy
     }
 
     //Enemy Attacks und Player-Schaden Management + Player Tod:
-    public void controlAttack()
+    private void controlAttack()
     {
         if(Vector2.Distance(target.position, transform.position) <= attackRadius && canAttack == true)
         {
             animator.SetBool("inRange", true);
             StartCoroutine(hitInterval());
         }
-        else if(playerHealth <= 0)
+        else if(playerCurrentHealth <= 0)
         {
-            Debug.Log("Player dead");
+            rigidPlayer.velocity = Vector2.zero;
+            playerAnimator.SetBool("isDead", true);
+            StartCoroutine(destroyPlayer());
         }
     }
 
-    public IEnumerator hitInterval()
+    //Alle IEnumerators, welche mit Attack des Gegners verbunden sind:
+    private IEnumerator hitInterval()
     {
         canAttack = false;
         yield return new WaitForSeconds(1f);
@@ -145,7 +155,9 @@ public class mole1 : enemy
 
             if(playerAnimator.GetBool("Block") == false)
             {
-                playerHealth -= 20;
+                playerCurrentHealth -= 20;
+                playerHealthbar.SetHealth(playerCurrentHealth);
+                //Animation:
                 playerAnimator.SetBool("isHurt", true);
                 StartCoroutine(backtoPlayerIdle());
             }
@@ -157,13 +169,13 @@ public class mole1 : enemy
         }
     }
 
-    public IEnumerator backtoPlayerIdle()
+    private IEnumerator backtoPlayerIdle()
     {
         yield return new WaitForSeconds(0.4f);
         playerAnimator.SetBool("isHurt", false);
         canAttack = true;
     }
-    public IEnumerator attackToIdle()
+    private IEnumerator attackToIdle()
     {
         yield return new WaitForSeconds(0.2f);
         animator.SetBool("attack", false);
@@ -172,5 +184,10 @@ public class mole1 : enemy
         {
             canAttack = true;
         }
+    }
+    private IEnumerator destroyPlayer()
+    {
+        yield return new WaitForSeconds(1f);
+        Application.LoadLevel("Stage 1");
     }
 }
