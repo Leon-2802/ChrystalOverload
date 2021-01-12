@@ -12,6 +12,7 @@ public class mole1 : enemy
     public Animator animator;
     public Animator playerAnimator;
     int currentHealth;
+    public healthbar moleHealthbar;
     public int playerCurrentHealth;
     public healthbar playerHealthbar;
     private bool canAttack = true;
@@ -31,6 +32,7 @@ public class mole1 : enemy
     private void Start() 
     {
         currentHealth = maxHealth;
+        moleHealthbar.SetMaxHealth(maxHealth);
         playerCurrentHealth = maxHealth;
         playerHealthbar.SetMaxHealth(maxHealth);
 
@@ -51,6 +53,7 @@ public class mole1 : enemy
         if(collision.collider.CompareTag("arrow"))
         {
             currentHealth -= 25;
+            moleHealthbar.SetHealth(currentHealth);
 
             if(currentHealth <= 0)
             {
