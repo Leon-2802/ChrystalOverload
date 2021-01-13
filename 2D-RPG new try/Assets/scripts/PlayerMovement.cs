@@ -79,6 +79,10 @@ public class PlayerMovement : MonoBehaviour
        {
            rb.velocity = Vector2.zero;
        }
+       else if(animator.GetBool("isDead") == true)
+       {
+           rb.velocity = Vector2.zero;
+       }
         else
        {
             rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);

@@ -54,6 +54,7 @@ public class mole1 : enemy
         {
             currentHealth -= 25;
             moleHealthbar.SetHealth(currentHealth);
+            moveSpeed = 2;
 
             if(currentHealth <= 0)
             {
@@ -111,20 +112,24 @@ public class mole1 : enemy
 
     private void checkDistance()
     {
-        if(Vector2.Distance(target.position, transform.position) <= detectRadius && Vector2.Distance(target.position, transform.position) > stopRadius || enemyRage == true)
+        if(animator.GetBool("isHurt") == false)
         {
-            Vector2 moving = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            rigidEnemy.MovePosition(moving);
-            //X und Y Werte der Bewegung an Animator übermitteln -> Animationen werden aufgerufen
-            animator.SetFloat("horizontal", - (transform.position.x - target.position.x));
-            animator.SetFloat("vertical", - (transform.position.y - target.position.y));
 
-            animator.SetBool("walk", true);
-        }
+            if(Vector2.Distance(target.position, transform.position) <= detectRadius && Vector2.Distance(target.position, transform.position) > stopRadius || enemyRage == true)
+            {
+                Vector2 moving = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                rigidEnemy.MovePosition(moving);
+                //X und Y Werte der Bewegung an Animator übermitteln -> Animationen werden aufgerufen
+                animator.SetFloat("horizontal", - (transform.position.x - target.position.x));
+                animator.SetFloat("vertical", - (transform.position.y - target.position.y));
 
-        else
-        {
-            animator.SetBool("walk", false);
+                animator.SetBool("walk", true);
+            }
+
+            else
+            {
+                animator.SetBool("walk", false);
+            }
         }
     }
 
@@ -138,7 +143,6 @@ public class mole1 : enemy
         }
         else if(playerCurrentHealth <= 0)
         {
-            rigidPlayer.velocity = Vector2.zero;
             playerAnimator.SetBool("isDead", true);
             StartCoroutine(destroyPlayer());
         }
