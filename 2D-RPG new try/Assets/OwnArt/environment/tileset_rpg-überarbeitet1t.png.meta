@@ -1,0 +1,1472 @@
+fileFormatVersion: 2
+guid: 4dd7a837f1487534e87c1c4df61d5d9f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6764388911737384378
+    second: "tileset_rpg-\xFCberarbeitet1t_0"
+  - first:
+      213: -5381211776321149091
+    second: "tileset_rpg-\xFCberarbeitet1t_1"
+  - first:
+      213: 2923413488455632247
+    second: "tileset_rpg-\xFCberarbeitet1t_2"
+  - first:
+      213: 8050043491918504117
+    second: "tileset_rpg-\xFCberarbeitet1t_3"
+  - first:
+      213: -6434542932755748130
+    second: "tileset_rpg-\xFCberarbeitet1t_4"
+  - first:
+      213: -8931868372333992013
+    second: "tileset_rpg-\xFCberarbeitet1t_5"
+  - first:
+      213: -7257480562533625457
+    second: "tileset_rpg-\xFCberarbeitet1t_6"
+  - first:
+      213: 8248718383205946460
+    second: "tileset_rpg-\xFCberarbeitet1t_7"
+  - first:
+      213: 6944400742977978943
+    second: "tileset_rpg-\xFCberarbeitet1t_8"
+  - first:
+      213: 573669467676682881
+    second: "tileset_rpg-\xFCberarbeitet1t_9"
+  - first:
+      213: -5230744077185674537
+    second: "tileset_rpg-\xFCberarbeitet1t_10"
+  - first:
+      213: 1806544992634831701
+    second: "tileset_rpg-\xFCberarbeitet1t_11"
+  - first:
+      213: -749272605327844858
+    second: "tileset_rpg-\xFCberarbeitet1t_12"
+  - first:
+      213: -6076021648366921400
+    second: "tileset_rpg-\xFCberarbeitet1t_13"
+  - first:
+      213: 9041762734285847703
+    second: "tileset_rpg-\xFCberarbeitet1t_14"
+  - first:
+      213: -3476756691548464610
+    second: "tileset_rpg-\xFCberarbeitet1t_15"
+  - first:
+      213: -3554903523213389778
+    second: "tileset_rpg-\xFCberarbeitet1t_16"
+  - first:
+      213: 8586334518350345757
+    second: "tileset_rpg-\xFCberarbeitet1t_17"
+  - first:
+      213: 2343446770349256410
+    second: "tileset_rpg-\xFCberarbeitet1t_18"
+  - first:
+      213: 1494883804013609915
+    second: "tileset_rpg-\xFCberarbeitet1t_19"
+  - first:
+      213: -2007728182444294070
+    second: "tileset_rpg-\xFCberarbeitet1t_20"
+  - first:
+      213: -7337275697817989799
+    second: "tileset_rpg-\xFCberarbeitet1t_21"
+  - first:
+      213: 7883853495192056706
+    second: "tileset_rpg-\xFCberarbeitet1t_22"
+  - first:
+      213: 8604685544113575803
+    second: "tileset_rpg-\xFCberarbeitet1t_23"
+  - first:
+      213: 5390866384522028036
+    second: "tileset_rpg-\xFCberarbeitet1t_24"
+  - first:
+      213: 4916701425284475152
+    second: "tileset_rpg-\xFCberarbeitet1t_25"
+  - first:
+      213: -6437738978381361269
+    second: "tileset_rpg-\xFCberarbeitet1t_26"
+  - first:
+      213: -5007698090237286741
+    second: "tileset_rpg-\xFCberarbeitet1t_27"
+  - first:
+      213: 1192290387486834062
+    second: "tileset_rpg-\xFCberarbeitet1t_28"
+  - first:
+      213: 6430573506677027891
+    second: "tileset_rpg-\xFCberarbeitet1t_29"
+  - first:
+      213: 2568194760468579204
+    second: "tileset_rpg-\xFCberarbeitet1t_30"
+  - first:
+      213: -1593145006055731708
+    second: "tileset_rpg-\xFCberarbeitet1t_31"
+  - first:
+      213: 4529327271891881920
+    second: "tileset_rpg-\xFCberarbeitet1t_32"
+  - first:
+      213: -287709868353371856
+    second: "tileset_rpg-\xFCberarbeitet1t_33"
+  - first:
+      213: -5553430002965288118
+    second: "tileset_rpg-\xFCberarbeitet1t_34"
+  - first:
+      213: -2629518338164895507
+    second: "tileset_rpg-\xFCberarbeitet1t_35"
+  - first:
+      213: -7130231102367186149
+    second: "tileset_rpg-\xFCberarbeitet1t_36"
+  - first:
+      213: -2520217860199625175
+    second: "tileset_rpg-\xFCberarbeitet1t_37"
+  - first:
+      213: 4909835674161354768
+    second: "tileset_rpg-\xFCberarbeitet1t_38"
+  - first:
+      213: 849306849133439128
+    second: "tileset_rpg-\xFCberarbeitet1t_39"
+  - first:
+      213: 2743894347808899574
+    second: "tileset_rpg-\xFCberarbeitet1t_40"
+  - first:
+      213: -8891665238435985447
+    second: "tileset_rpg-\xFCberarbeitet1t_41"
+  - first:
+      213: -6396880415432712984
+    second: "tileset_rpg-\xFCberarbeitet1t_42"
+  - first:
+      213: 8315231397538345335
+    second: "tileset_rpg-\xFCberarbeitet1t_43"
+  - first:
+      213: -260645080785969798
+    second: "tileset_rpg-\xFCberarbeitet1t_44"
+  - first:
+      213: 1001403404317897918
+    second: "tileset_rpg-\xFCberarbeitet1t_45"
+  - first:
+      213: 3177697587598542891
+    second: "tileset_rpg-\xFCberarbeitet1t_46"
+  - first:
+      213: -4937434405008108425
+    second: "tileset_rpg-\xFCberarbeitet1t_47"
+  - first:
+      213: 2336645184638174459
+    second: "tileset_rpg-\xFCberarbeitet1t_48"
+  - first:
+      213: 6045273494899013386
+    second: "tileset_rpg-\xFCberarbeitet1t_49"
+  - first:
+      213: -7202216310138631596
+    second: "tileset_rpg-\xFCberarbeitet1t_50"
+  - first:
+      213: 3300573585444808443
+    second: "tileset_rpg-\xFCberarbeitet1t_51"
+  - first:
+      213: 4539981519401036701
+    second: "tileset_rpg-\xFCberarbeitet1t_52"
+  - first:
+      213: 2313318514209276109
+    second: "tileset_rpg-\xFCberarbeitet1t_53"
+  - first:
+      213: -8039252224768854701
+    second: "tileset_rpg-\xFCberarbeitet1t_54"
+  - first:
+      213: -6494058938629810289
+    second: "tileset_rpg-\xFCberarbeitet1t_55"
+  - first:
+      213: -8848502113354217642
+    second: "tileset_rpg-\xFCberarbeitet1t_56"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6425d41cf101022a0800000000000000
+      internalID: -6764388911737384378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_1"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57aa3b76681255b0800000000000000
+      internalID: -5381211776321149091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775cbfe241d029820800000000000000
+      internalID: 2923413488455632247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_3"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b06f3aa7ef77bf60800000000000000
+      internalID: 8050043491918504117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_4"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edae7195b49e3b6a0800000000000000
+      internalID: -6434542932755748130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_5"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b76c76d901ab0480800000000000000
+      internalID: -8931868372333992013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_6"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8191e151ef384b90800000000000000
+      internalID: -7257480562533625457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_7"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54993b7aa5597270800000000000000
+      internalID: 8248718383205946460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_8"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f324927cea77f5060800000000000000
+      internalID: 6944400742977978943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_9"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a2b57675516f700800000000000000
+      internalID: 573669467676682881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_10"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d29e58b9f9a867b0800000000000000
+      internalID: -5230744077185674537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_11"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55382cc6913221910800000000000000
+      internalID: 1806544992634831701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_12"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a9087098c0a95f0800000000000000
+      internalID: -749272605327844858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_13"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8499181c082adaba0800000000000000
+      internalID: -6076021648366921400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_14"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cf8703d4bca7d70800000000000000
+      internalID: 9041762734285847703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_15"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a9acda53410cfc0800000000000000
+      internalID: -3476756691548464610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_16"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 518
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20d41094127aaec0800000000000000
+      internalID: -3554903523213389778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_17"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1672f880c9c82770800000000000000
+      internalID: 8586334518350345757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_18"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade24b8eb68958020800000000000000
+      internalID: 2343446770349256410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_19"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb347b646e4eeb410800000000000000
+      internalID: 1494883804013609915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_20"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a400edffadd1324e0800000000000000
+      internalID: -2007728182444294070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_21"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95dc37c90a2cc2a90800000000000000
+      internalID: -7337275697817989799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_22"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283f422cbf2196d60800000000000000
+      internalID: 7883853495192056706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_23"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7714dca9ebf96770800000000000000
+      internalID: 8604685544113575803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_24"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404a7092a6430da40800000000000000
+      internalID: 5390866384522028036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_25"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019ecb085e1ab3440800000000000000
+      internalID: 4916701425284475152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_26"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f84ecf18e88a6a0800000000000000
+      internalID: -6437738978381361269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_27"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6210d6e15118ab0800000000000000
+      internalID: -5007698090237286741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_28"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8df3475acddb8010800000000000000
+      internalID: 1192290387486834062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_29"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334b58f988cfd3950800000000000000
+      internalID: 6430573506677027891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_30"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483cfbb178f04a320800000000000000
+      internalID: 2568194760468579204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_31"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e4c5ece0304e9e0800000000000000
+      internalID: -1593145006055731708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_32"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 502
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfca9808276bde30800000000000000
+      internalID: 4529327271891881920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_33"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 486
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0314c6a2669d10cf0800000000000000
+      internalID: -287709868353371856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_34"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 486
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4be14ce5d04ee2b0800000000000000
+      internalID: -5553430002965288118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_35"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 486
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de05e43d003128bd0800000000000000
+      internalID: -2629518338164895507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_36"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 486
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1346f807945c0d90800000000000000
+      internalID: -7130231102367186149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_37"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 486
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ec4367533660dd0800000000000000
+      internalID: -2520217860199625175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_38"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 486
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0189def388d332440800000000000000
+      internalID: 4909835674161354768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_39"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898a7e7541859cb00800000000000000
+      internalID: 849306849133439128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_40"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f10a5e1f55441620800000000000000
+      internalID: 2743894347808899574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_41"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7855163957a9480800000000000000
+      internalID: -8891665238435985447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_42"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecda7f7727b937a0800000000000000
+      internalID: -6396880415432712984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_43"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771b27b66e2a56370800000000000000
+      internalID: 8315231397538345335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_44"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d9c431ea0026cf0800000000000000
+      internalID: -260645080785969798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_45"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb43c3f2713b5ed00800000000000000
+      internalID: 1001403404317897918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_46"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 470
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b284d68ae13791c20800000000000000
+      internalID: 3177697587598542891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_47"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 454
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77413bb7195ba7bb0800000000000000
+      internalID: -4937434405008108425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_48"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 454
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf44c745a6e6d6020800000000000000
+      internalID: 2336645184638174459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_49"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 454
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a073a81e63025e350800000000000000
+      internalID: 6045273494899013386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_50"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 454
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a89a6cc669c0c90800000000000000
+      internalID: -7202216310138631596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_51"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 454
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6a973503efdcd20800000000000000
+      internalID: 3300573585444808443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_52"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 438
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bacb65321410f30800000000000000
+      internalID: 4539981519401036701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_53"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 438
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc047c3aeee8a1020800000000000000
+      internalID: 2313318514209276109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_54"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 438
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35532e202b6de6090800000000000000
+      internalID: -8039252224768854701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_55"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 438
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8715846dc770e5a0800000000000000
+      internalID: -6494058938629810289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "tileset_rpg-\xFCberarbeitet1t_56"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 438
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6578a33953ec33580800000000000000
+      internalID: -8848502113354217642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
