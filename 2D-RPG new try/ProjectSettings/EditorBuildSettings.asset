@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Tiny RPG Forest/Scenes/Stage 1.unity
+    guid: 66f1fddeeb1948b4899447dd26066ef7
+  - enabled: 1
+    path: Assets/Tiny RPG Forest/Scenes/Stage 2.unity
+    guid: 84b4f50055169754e988f45dfa2d6bd4
   m_configObjects: {}

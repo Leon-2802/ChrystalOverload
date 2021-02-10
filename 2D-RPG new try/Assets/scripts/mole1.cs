@@ -64,6 +64,8 @@ public class mole1 : enemy
             {
                 animator.SetBool("isHurt", true);
                 enemyRage = true;
+                rigidEnemy.velocity = Vector2.zero;
+                rigidEnemy.angularVelocity = 0;
                 StartCoroutine(backToIdle());
             }
             
@@ -117,18 +119,28 @@ public class mole1 : enemy
 
             if(Vector2.Distance(target.position, transform.position) <= detectRadius && Vector2.Distance(target.position, transform.position) > stopRadius || enemyRage == true)
             {
-                Vector2 moving = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                rigidEnemy.MovePosition(moving);
-                //X und Y Werte der Bewegung an Animator übermitteln -> Animationen werden aufgerufen
-                animator.SetFloat("horizontal", - (transform.position.x - target.position.x));
-                animator.SetFloat("vertical", - (transform.position.y - target.position.y));
+                if (Vector2.Distance(target.position, transform.position) <= stopRadius) 
+                {
+                    animator.SetBool("walk", false);
+                    rigidEnemy.velocity = Vector2.zero;
+                    rigidEnemy.angularVelocity = 0;
+                }
+                else {
+                    Vector2 moving = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                    rigidEnemy.MovePosition(moving);
+                    //X und Y Werte der Bewegung an Animator übermitteln -> Animationen werden aufgerufen
+                    animator.SetFloat("horizontal", - (transform.position.x - target.position.x));
+                    animator.SetFloat("vertical", - (transform.position.y - target.position.y));
 
-                animator.SetBool("walk", true);
+                    animator.SetBool("walk", true);
+                }
             }
 
             else
             {
                 animator.SetBool("walk", false);
+                rigidEnemy.velocity = Vector2.zero;
+                rigidEnemy.angularVelocity = 0;
             }
         }
     }
@@ -146,6 +158,9 @@ public class mole1 : enemy
             playerAnimator.SetBool("isDead", true);
             StartCoroutine(destroyPlayer());
         }
+        else if (Vector2.Distance(target.position, transform.position) > attackRadius) {
+            animator.SetBool("inRange", false);
+        }
     }
 
     //Alle IEnumerators, welche mit Attack des Gegners verbunden sind:
@@ -155,24 +170,23 @@ public class mole1 : enemy
         yield return new WaitForSeconds(1f);
 
         if(Vector2.Distance(target.position, transform.position) <= attackRadius)
-        {   
+        { 
             animator.SetBool("attack", true);
             enemyRage = false;
             StartCoroutine(attackToIdle());
 
             if(playerAnimator.GetBool("Block") == false)
             {
-                playerCurrentHealth -= 20;
-                playerHealthbar.SetHealth(playerCurrentHealth);
-                //Animation:
-                playerAnimator.SetBool("isHurt", true);
-                StartCoroutine(backtoPlayerIdle());
+                    playerCurrentHealth -= 20;
+                    playerHealthbar.SetHealth(playerCurrentHealth);
+                    //Animation:
+                    playerAnimator.SetBool("isHurt", true);
+                    StartCoroutine(backtoPlayerIdle());    
             }
-
-        }
-        else {
-            canAttack = true;
-            animator.SetBool("inRange", false);
+            else {
+                canAttack = true;
+                animator.SetBool("inRange", false);
+            }
         }
     }
 

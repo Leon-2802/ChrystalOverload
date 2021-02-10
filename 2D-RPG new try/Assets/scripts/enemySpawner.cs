@@ -7,15 +7,13 @@ public class enemySpawner : MonoBehaviour
     public Transform spawnPoint;
     public Transform target;
     public GameObject enemyPrefab;
-    public bool spawning = true;
     public float respawnTime;
+    public float respawnTime2;
 
-    void Update()
+    public void Start()
     {
-        if(spawning == true)
-        {
-           StartCoroutine(spawnTimer());
-        }
+        StartCoroutine(spawnTimer());
+        StartCoroutine(spawnTimer2());
     }
 
     private void spawnEnemy()
@@ -25,10 +23,14 @@ public class enemySpawner : MonoBehaviour
     }
     private IEnumerator spawnTimer()
     {
-        spawning = false;
         yield return new WaitForSeconds(respawnTime);
         spawnEnemy();
-        spawning = true;
+    }
+
+    private IEnumerator spawnTimer2()
+    {
+        yield return new WaitForSeconds(respawnTime2);
+        spawnEnemy();
     }
 
 }
