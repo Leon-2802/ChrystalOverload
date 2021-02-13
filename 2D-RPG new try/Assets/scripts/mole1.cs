@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class mole1 : enemy
 {
@@ -189,7 +190,7 @@ public class mole1 : enemy
             }
         }
     }
-
+    
     private IEnumerator backtoPlayerIdle()
     {
         yield return new WaitForSeconds(0.4f);
@@ -209,6 +210,6 @@ public class mole1 : enemy
     private IEnumerator destroyPlayer()
     {
         yield return new WaitForSeconds(1f);
-        Application.LoadLevel("Stage 1");
+        SceneManager.LoadScene ("Stage 1");
     }
 }
