@@ -18,13 +18,7 @@ public class Arrow : MonoBehaviour
         rigid.velocity = Vector2.zero;
         rigid.angularVelocity = 0;
         Destroy(GetComponent<BoxCollider2D>());
-        StartCoroutine(Disappear());
-    } 
-
-    private IEnumerator Disappear()
-    {
-        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
-    }
+    } 
 
 }

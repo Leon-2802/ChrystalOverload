@@ -230,9 +230,11 @@ MonoBehaviour:
   playerHealthbar: {fileID: 7005488809973340312, guid: 5b132bcb12cfc0b468cb1f7e17afdd57,
     type: 3}
   target: {fileID: 3746587203096085031, guid: 76cc6bf4b8418af4c902b2528b9e050e, type: 3}
-  detectRadius: 4
+  detectRadius: 7
   stopRadius: 1.3
   attackRadius: 1.3
+  dontWalk: 0
+  enemyRage: 0
 --- !u!70 &5258134652589113168
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -260,7 +262,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.75
   m_Speed: 2
-  m_Acceleration: 8
+  m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -284,6 +286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3746587203096085031, guid: 76cc6bf4b8418af4c902b2528b9e050e, type: 3}
+  enemy: {fileID: 5258134652589113169}
+  enemyAnim: {fileID: 5258134652589113170}
+  script1: {fileID: 5258134652589113171}
+  detectRadius: 0
+  stopRadius: 0
+  attackRadius: 0
 --- !u!1 &5258134652910102177
 GameObject:
   m_ObjectHideFlags: 0

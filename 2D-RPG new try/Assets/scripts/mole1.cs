@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class mole1 : enemy
 {
     public GameObject Enemy1;
     public Rigidbody2D rigidEnemy;
+    NavMeshAgent agent;
     public Rigidbody2D rigidPlayer;
     public Animator animator;
     public Animator playerAnimator;
@@ -17,13 +19,15 @@ public class mole1 : enemy
     public int playerCurrentHealth;
     public healthbar playerHealthbar;
     private bool canAttack = true;
-    private bool enemyRage = false;
+    // private bool enemyRage = false;
 
     //movement:
     public Transform target;
     public float detectRadius;
     public float stopRadius;
     public float attackRadius;
+    public bool dontWalk = false;
+    public bool enemyRage = false;
 
     /*knockback:
     public float impact;
@@ -38,6 +42,10 @@ public class mole1 : enemy
         playerHealthbar.SetMaxHealth(maxHealth);
 
         target = GameObject.FindWithTag("Player").transform;
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     private void FixedUpdate()
@@ -64,9 +72,11 @@ public class mole1 : enemy
             else 
             {
                 animator.SetBool("isHurt", true);
-                enemyRage = true;
+                // enemyRage = true;
                 rigidEnemy.velocity = Vector2.zero;
                 rigidEnemy.angularVelocity = 0;
+                agent.velocity = Vector2.zero;
+                agent.Stop();
                 StartCoroutine(backToIdle());
             }
             
@@ -88,7 +98,14 @@ public class mole1 : enemy
     private void Die()
     {
         animator.SetBool("isDead", true);
+        dontWalk = true;
+        rigidEnemy.isKinematic = true;
+        moleHealthbar.gameObject.SetActive(false);
+        // rigidEnemy.collisionDetectionMode = false;
         rigidEnemy.velocity = Vector2.zero;
+        rigidEnemy.angularVelocity = 0;
+        agent.velocity = Vector2.zero;
+        agent.Stop();
         StartCoroutine(enemyDead());
         //this.enabled = false;
     }
@@ -102,6 +119,9 @@ public class mole1 : enemy
     {
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("isHurt", false);
+        enemyRage = true;
+        dontWalk = false;
+        agent.Resume();
     }
 
     /* private IEnumerator knockStop(Rigidbody2D rigidEnemy)
@@ -113,35 +133,22 @@ public class mole1 : enemy
         }
     } */
 
+    //Checkt ob Player zu nah/zu weit ist im FixedUpdate, wenn zu nah/zu weit -> Enemy bleibt stehen:
     private void checkDistance()
     {
-        if(animator.GetBool("isHurt") == false)
-        {
-
-            if(Vector2.Distance(target.position, transform.position) <= detectRadius && Vector2.Distance(target.position, transform.position) > stopRadius || enemyRage == true)
+        if (enemyRage == false) {
+            if (Vector2.Distance(target.position, transform.position) <= stopRadius || Vector2.Distance(target.position, transform.position) >= detectRadius) 
             {
-                if (Vector2.Distance(target.position, transform.position) <= stopRadius) 
-                {
-                    animator.SetBool("walk", false);
-                    rigidEnemy.velocity = Vector2.zero;
-                    rigidEnemy.angularVelocity = 0;
-                }
-                else {
-                    Vector2 moving = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                    rigidEnemy.MovePosition(moving);
-                    //X und Y Werte der Bewegung an Animator übermitteln -> Animationen werden aufgerufen
-                    animator.SetFloat("horizontal", - (transform.position.x - target.position.x));
-                    animator.SetFloat("vertical", - (transform.position.y - target.position.y));
-
-                    animator.SetBool("walk", true);
-                }
-            }
-
-            else
-            {
+                dontWalk = true;
                 animator.SetBool("walk", false);
                 rigidEnemy.velocity = Vector2.zero;
                 rigidEnemy.angularVelocity = 0;
+                agent.velocity = Vector2.zero;
+                agent.Stop();
+            }
+            else
+            {
+                dontWalk = false;
             }
         }
     }
@@ -173,7 +180,7 @@ public class mole1 : enemy
         if(Vector2.Distance(target.position, transform.position) <= attackRadius)
         { 
             animator.SetBool("attack", true);
-            enemyRage = false;
+            // enemyRage = false;
             StartCoroutine(attackToIdle());
 
             if(playerAnimator.GetBool("Block") == false)
