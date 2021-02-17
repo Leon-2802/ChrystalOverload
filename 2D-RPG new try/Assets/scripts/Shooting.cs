@@ -19,8 +19,11 @@ public class Shooting : MonoBehaviour
     public float arrowSpeed = 30f;
     private Vector2 direction;
     bool canAttack = true;
-
-    // Update is called once per frame
+    public soundManagerScript sounds;
+    void Start() 
+    {
+        sounds = GetComponent<soundManagerScript>();
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.J) && canAttack)
