@@ -10,6 +10,7 @@ public class enemyMovement : MonoBehaviour
     public Animator enemyAnim;
     NavMeshAgent agent;
     public mole1 script1;
+    public Vector2 unpausedSpeed;
     public float detectRadius;
     public float stopRadius;
     public float attackRadius;
@@ -28,13 +29,23 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (script1.dontWalk == false)
+        if (script1.dontWalk == true)
         {
-            agent.Resume();
+            agent.velocity = Vector2.zero;
+            agent.isStopped = true;
+        }
+        else 
+        {
+            if (agent.isStopped) 
+            {
+               agent.isStopped = false;
+               agent.velocity = unpausedSpeed;
+            }
             agent.SetDestination(target.position);
             enemyAnim.SetFloat("horizontal", - (transform.position.x - target.position.x));
             enemyAnim.SetFloat("vertical", - (transform.position.y - target.position.y));
             enemyAnim.SetBool("walk", true);
+            unpausedSpeed = agent.velocity;
         }
     }
 }

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4152730124457035852}
   - component: {fileID: -1744387143896001475}
   - component: {fileID: -8931368147425715665}
-  - component: {fileID: 218715425209815283}
   - component: {fileID: -172206548308758819}
   m_Layer: 0
   m_Name: arrowLeft
@@ -168,14 +167,6 @@ MonoBehaviour:
   arrowPrefab: {fileID: 5545556078704577000}
   rigid: {fileID: 1452522021577682186}
   laserAnim: {fileID: -1744387143896001475}
---- !u!81 &218715425209815283
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5545556078704577000}
-  m_Enabled: 1
 --- !u!82 &-172206548308758819
 AudioSource:
   m_ObjectHideFlags: 0

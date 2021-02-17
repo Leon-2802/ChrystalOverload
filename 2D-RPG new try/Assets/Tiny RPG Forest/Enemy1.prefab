@@ -226,8 +226,12 @@ MonoBehaviour:
   playerAnimator: {fileID: 3746587203096085024, guid: 76cc6bf4b8418af4c902b2528b9e050e,
     type: 3}
   moleHealthbar: {fileID: 5258134653820056025}
+  playerScript: {fileID: 3746587203096085028, guid: 76cc6bf4b8418af4c902b2528b9e050e,
+    type: 3}
   playerCurrentHealth: 0
   playerHealthbar: {fileID: 7005488809973340312, guid: 5b132bcb12cfc0b468cb1f7e17afdd57,
+    type: 3}
+  callSounds: {fileID: 1464138754880278703, guid: 6a97e51b97041934591db1fe76ea9d0e,
     type: 3}
   target: {fileID: 3746587203096085031, guid: 76cc6bf4b8418af4c902b2528b9e050e, type: 3}
   detectRadius: 7
@@ -248,8 +252,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012214661, y: -0.30077064}
-  m_Size: {x: 0.65553665, y: 0.66452646}
+  m_Offset: {x: -0.012214661, y: -0.1480726}
+  m_Size: {x: 0.65553665, y: 0.96992254}
   m_Direction: 0
 --- !u!195 &4531927686275123076
 NavMeshAgent:
@@ -289,6 +293,7 @@ MonoBehaviour:
   enemy: {fileID: 5258134652589113169}
   enemyAnim: {fileID: 5258134652589113170}
   script1: {fileID: 5258134652589113171}
+  unpausedSpeed: {x: 0, y: 0}
   detectRadius: 0
   stopRadius: 0
   attackRadius: 0

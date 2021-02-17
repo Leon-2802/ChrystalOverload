@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2902349979281026384}
   - component: {fileID: 999198680106399196}
   - component: {fileID: -2535878426824282879}
-  - component: {fileID: 3130814874554183839}
   - component: {fileID: -168751638856342478}
   m_Layer: 0
   m_Name: arrowDown
@@ -168,14 +167,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!81 &3130814874554183839
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938338548114635579}
-  m_Enabled: 1
 --- !u!82 &-168751638856342478
 AudioSource:
   m_ObjectHideFlags: 0

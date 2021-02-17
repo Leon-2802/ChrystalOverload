@@ -9,17 +9,32 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     private Vector2 movement;
+    public soundManagerScript callSounds;
+    // public float enemyDeaths;
+    public bool allowTransition;
+
+    void Start() 
+    {
+        // enemyDeaths = 0;
+        allowTransition = false;
+        StartCoroutine(nextSceneOk());
+    }
 
     // Update is called once per frame, used for processing inputs
     void Update()
     {
         processInput();
+        // if (enemyDeaths >= 2)
+        // {
+        //     Debug.Log("jo");       
+        // }
     }
 
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     void FixedUpdate()
     {
         Move();
+        // checkForWalk();
     }
 
     void processInput()
@@ -50,7 +65,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
     void safeLastMove()
     {
         if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1)
@@ -64,6 +78,18 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("LastHorizontal", 0);
         }
     }
+
+    // public void checkForWalk() 
+    // {
+    //     if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+    //     {
+    //         callSounds.Play("PlayerWalk");
+    //     }
+    //     else 
+    //     {
+    //         callSounds.Stop("PlayerWalk");
+    //     }
+    // }
 
     void Move()
     {
@@ -94,5 +120,11 @@ public class PlayerController : MonoBehaviour
         if(animator.GetBool("Shoot"))
             animator.SetBool("Shoot", false);
     } 
+
+    public IEnumerator nextSceneOk()
+    {
+        yield return new WaitForSeconds(15f);
+        allowTransition = true;
+    }   
 }   
 

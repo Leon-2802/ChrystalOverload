@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5508260730645386974}
   - component: {fileID: -4218969436386834193}
   - component: {fileID: 770773144213683196}
-  - component: {fileID: -1595047834663811112}
   - component: {fileID: -7029870239036785852}
   m_Layer: 0
   m_Name: arrowUp
@@ -168,14 +167,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!81 &-1595047834663811112
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5608377084985062708}
-  m_Enabled: 1
 --- !u!82 &-7029870239036785852
 AudioSource:
   m_ObjectHideFlags: 0
