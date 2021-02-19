@@ -7,6 +7,7 @@ public class levelGeneration : MonoBehaviour
     public Transform[] startingPositions;
     public GameObject[] rooms;
     private int direction;
+    private int rand;
     public float moveAmount;
     public float moveAmountUp;
 
@@ -17,6 +18,8 @@ public class levelGeneration : MonoBehaviour
     public float minX;
     public float maxX;
     public float maxY;
+    public LayerMask room;
+    private int downCounter;
     void Start()
     {
         int randStartingPos = Random.Range(0, startingPositions.Length);   
@@ -43,8 +46,21 @@ public class levelGeneration : MonoBehaviour
         if (direction == 1 || direction == 2) //Move Right
         {
             if (transform.position.x < maxX) {
+                downCounter = 0;
+
                 Vector2 newPos = new Vector2(transform.position.x + moveAmount, transform.position.y);
                 transform.position = newPos;
+
+                int rand = Random.Range(0, rooms.Length);
+                Instantiate(rooms[rand], transform.position, Quaternion.identity);
+
+                direction = Random.Range(1, 6);
+                if (direction == 3) {
+                    direction = 2;
+                }
+                else if (direction == 4) {
+                    direction = 5;
+                }
             }
             else {
                 direction = 5;
@@ -52,9 +68,16 @@ public class levelGeneration : MonoBehaviour
         }
         else if (direction == 3 || direction == 4) //Move Left
         {
+            downCounter = 0;
+
             if (transform.position.x > minX) {
                 Vector2 newPos = new Vector2(transform.position.x - moveAmount, transform.position.y);
                 transform.position = newPos;
+
+                int rand = Random.Range(0, rooms.Length);
+                Instantiate(rooms[rand], transform.position, Quaternion.identity);
+
+                direction = Random.Range(3, 6);
             }
             else {
                 direction = 5;
@@ -62,17 +85,41 @@ public class levelGeneration : MonoBehaviour
         }
         else if (direction == 5) //Move Up
         {
-            if (transform.position.y < maxY) {
+            downCounter++;
+
+            if (transform.position.y < maxY) 
+            {
+                Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
+                if (roomDetection.GetComponent<roomType>().type != 1 && roomDetection.GetComponent<roomType>().type != 3) {
+
+                    if (downCounter >= 2) {
+                        roomDetection.GetComponent<roomType>().destroyRoom();
+                        Instantiate(rooms[3], transform.position, Quaternion.identity);
+                    }
+                    else {
+                        roomDetection.GetComponent<roomType>().destroyRoom();
+
+                        int randBottomRoom = Random.Range(1, 4);
+                        if (randBottomRoom == 2) {
+                            randBottomRoom = 1;
+                        }
+                        Instantiate(rooms[randBottomRoom], transform.position, Quaternion.identity);
+                    }
+                }
+
+
                 Vector2 newPos = new Vector2(transform.position.x, transform.position.y + moveAmountUp);
                 transform.position = newPos;
+
+                int rand = Random.Range(2, 4);
+                Instantiate(rooms[rand], transform.position, Quaternion.identity);
+
+                direction = Random.Range(1, 6);
             }
             else {
                 //Stop level Generation
                 stopGeneration = true;
             }
         }
-
-        Instantiate(rooms[0], transform.position, Quaternion.identity);
-        direction = Random.Range(1, 6);
     }
 }
