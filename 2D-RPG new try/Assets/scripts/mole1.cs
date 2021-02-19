@@ -229,10 +229,7 @@ public class mole1 : enemy
         yield return new WaitForSeconds(0.2f);
         animator.SetBool("attack", false);
         animator.SetBool("inRange", false);
-        if(playerAnimator.GetBool("Block") == true)
-        {
-            canAttack = true;
-        }
+        canAttack = true;
     }
     private IEnumerator destroyPlayer()
     {
