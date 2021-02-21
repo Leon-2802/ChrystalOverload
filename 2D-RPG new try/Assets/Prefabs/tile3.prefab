@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 549876304557891844}
   - component: {fileID: 8669373335674878213}
   - component: {fileID: 9163853853319076927}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: tile3
   m_TagString: solidObject
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300502, guid: 95d22684aba5646d79a26b3287a692b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

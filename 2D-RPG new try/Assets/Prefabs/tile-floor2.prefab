@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3266123754934422064}
   - component: {fileID: 4449349512450740549}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: tile-floor2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
