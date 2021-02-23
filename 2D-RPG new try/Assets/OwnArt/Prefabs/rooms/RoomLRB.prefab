@@ -603,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 5696676806292402252, guid: 67484deb57942154f95688c6361ed787, type: 3}
+  - {fileID: 2024445859526818634, guid: 252a0d0d1b74c3942b12f2d576fa0463, type: 3}
 --- !u!1 &1425203491725400967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4696887690306967085, guid: 96dd7dd574eefa046b7e0c284b6df88e, type: 3}
+  - {fileID: 6617288808341334520, guid: bac3dc616684a964da8e669e804d9088, type: 3}
 --- !u!1 &2634100732324316944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 8850236665959561419, guid: 1bf867c437504e74b9f1807725f68d40, type: 3}
+  - {fileID: 2668938563478496852, guid: daf85b9ce2983204e99492b1df687278, type: 3}
 --- !u!1 &2671631802402407733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4592426406085883579, guid: c82e21ccb0f5b94469d57499d63eaaba, type: 3}
+  - {fileID: 5161598111679600045, guid: 2061274ee700617439f6be1baf85af5b, type: 3}
 --- !u!1 &2764574403407856556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,6 +3439,7 @@ GameObject:
   - component: {fileID: 8459361281228320324}
   - component: {fileID: 8459361281228320326}
   - component: {fileID: 8459361281228320325}
+  - component: {fileID: 1695480705534064321}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -8966,6 +8971,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &1695480705534064321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459361281228320331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8459361281230465784
 GameObject:
   m_ObjectHideFlags: 0

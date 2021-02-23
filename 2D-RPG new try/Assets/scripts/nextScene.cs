@@ -20,12 +20,10 @@ public class nextScene : MonoBehaviour
    {
         if (takeScript.allowTransition == true)
         {
-            Debug.Log("extra thiccc");
             yield return new WaitForSeconds(2f);
-            SceneManager.LoadScene ("Stage 2");
+            SceneManager.LoadScene ("randomLevelTest");
         }
         else {
-            Debug.Log("thicc");
             yield break;
         }
    }

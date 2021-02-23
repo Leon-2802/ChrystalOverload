@@ -20,12 +20,13 @@ public class levelGeneration : MonoBehaviour
     public float maxY;
     public LayerMask room;
     private int downCounter;
+    public spawnPlayer spawnPly;
+
     void Start()
     {
-        int randStartingPos = Random.Range(0, startingPositions.Length);   
+        int randStartingPos = 1;
         transform.position = startingPositions[randStartingPos].position;
-        Instantiate(rooms[0], transform.position, Quaternion.identity);
-
+        Instantiate(rooms[3], transform.position, Quaternion.identity);
         direction = Random.Range(1, 6);
     }
 

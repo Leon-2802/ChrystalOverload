@@ -61,7 +61,7 @@ public class Shooting : MonoBehaviour
 
     void ShootRight()
     {
-        GameObject arrow = Instantiate(arrowPrefab, FirePoint.position, FirePoint.rotation); //Spawnt den Pfeil am FirePoint
+        GameObject arrow = Instantiate(arrowPrefab, FirePoint.position, Quaternion.identity); //Spawnt den Pfeil am FirePoint
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>(); // Ein Rigidbody mit Name "rb" wird erstellt, welcher gleich mit dem des arrows ist
         rb.AddForce(new Vector2 (arrowSpeed, 0), ForceMode2D.Impulse); // Pfeil mit arrowSpeed nach rechts fliegen lassen
 
@@ -69,21 +69,21 @@ public class Shooting : MonoBehaviour
 
     void ShootLeft()
     {
-        GameObject arrowLeft = Instantiate(arrowLeftPrefab, FirePointLeft.position, FirePointLeft.rotation);
+        GameObject arrowLeft = Instantiate(arrowLeftPrefab, FirePointLeft.position, Quaternion.identity);
         Rigidbody2D rb = arrowLeft.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2 (-arrowSpeed, 0), ForceMode2D.Impulse);
     }
 
     void ShootUp()
     {
-        GameObject arrowUp = Instantiate(arrowUpPrefab, FirePointUp.position, FirePointUp.rotation);
+        GameObject arrowUp = Instantiate(arrowUpPrefab, FirePointUp.position, Quaternion.identity);
         Rigidbody2D rb = arrowUp.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2 (0, arrowSpeed), ForceMode2D.Impulse);
     }
 
     void ShootDown()
     {
-        GameObject arrowDown = Instantiate(arrowDownPrefab, FirePointDown.position, FirePointDown.rotation);
+        GameObject arrowDown = Instantiate(arrowDownPrefab, FirePointDown.position, Quaternion.identity);
         Rigidbody2D rb = arrowDown.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2 (0, -arrowSpeed), ForceMode2D.Impulse);
     }
