@@ -5,43 +5,53 @@ using UnityEngine;
 public class enemyTestMovement : MonoBehaviour
 {
     public float attackRadius;
-    public float stopRadius;
-    public float moveSpeed;
     public Rigidbody2D rb;
     public Transform target;
-    public healthbar playerHealthbar;
-    public int playerCurrentHealth;
+    public healthbar enemyHealthbar;
+    private int enemyCurrentHealth;
     public int maxHealth = 100;
+    private bool ded = false;
+    public Animator enemyAnim;
+    private bool canShoot = true;
+    private bool playerFound;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float bulletSpeed;
+    public GameObject coin;
 
     // Update is called once per frame
     void Start() 
     {
         target = GameObject.FindWithTag("Player").transform;
 
-        playerCurrentHealth = maxHealth;
-        playerHealthbar.SetMaxHealth(maxHealth);
+        enemyCurrentHealth = maxHealth;
+        enemyHealthbar.SetMaxHealth(maxHealth);
     }
     void FixedUpdate()
     {
         checkDistance();
+        if (enemyCurrentHealth <= 0) {
+            rb.rotation = 0;
+            Destroy(GetComponent<PolygonCollider2D>());
+            enemyAnim.SetTrigger("ded");
+            ded = true;
+            StartCoroutine(death());
+        }
     }
 
     private void checkDistance()
     {
-        if (Vector2.Distance(target.position, transform.position) > stopRadius && Vector2.Distance(target.position, transform.position) < attackRadius)
+        if (Vector2.Distance(target.position, transform.position) < attackRadius || playerFound == true)
         {
-            Vector2 moving = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            rb.MovePosition(moving);
-
             Vector2 lookdir = target.position - transform.position;
             float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg + 90f;
             rb.rotation = angle;
+
+            if (canShoot == true && ded == false) {
+                StartCoroutine(controlShoot());
+            }
         }
-        else if (Vector2.Distance(target.position, transform.position) <= stopRadius) {
-            rb.velocity = Vector2.zero;
-            rb.angularVelocity = 0;
-        }
-        else {
+        else if (Vector2.Distance(target.position, transform.position) > attackRadius) {
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
         }
@@ -52,9 +62,43 @@ public class enemyTestMovement : MonoBehaviour
         if(other.collider.CompareTag("arrow"))
         {
             rb.velocity = Vector2.zero;
-            rb.angularVelocity = 0;
+            enemyCurrentHealth -= 15;
+            playerFound = true;
+            enemyHealthbar.SetHealth(enemyCurrentHealth);
+            enemyAnim.SetBool("Hurt", true);
+            StartCoroutine(backToIdle());
         }
     }
+    private IEnumerator backToIdle()
+    {
+        yield return new WaitForSeconds(0.5f);
+        enemyAnim.SetBool("Hurt", false);
+    }
 
+    private IEnumerator controlShoot()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(1.5f);
+        if (ded == false) {
+            enemyAnim.SetBool("shot", true);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            bulletRb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+            StartCoroutine(back2Idle());
+        }
+        canShoot = true;
+    }
+    private IEnumerator back2Idle()
+    {
+        yield return new WaitForSeconds(0.2f);
+        enemyAnim.SetBool("shot", false);
+    }
+
+    private IEnumerator death()
+    {
+        yield return new WaitForSeconds(0.8f);
+        Instantiate(coin, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
 
 }

@@ -8,6 +8,9 @@ TagManager:
   - enemy
   - MainCamera2
   - solidObject
+  - bullet
+  - movingEnemy
+  - coinNumber
   layers:
   - Default
   - TransparentFX

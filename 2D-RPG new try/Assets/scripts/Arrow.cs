@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour
         {
             return;
         }
-        else if(collide.collider.CompareTag("enemy")) 
+        else if(collide.collider.CompareTag("enemy") || collide.collider.CompareTag("movingEnemy")) 
         {
             rigid = GetComponent<Rigidbody2D>(); 
             rigid.velocity = Vector2.zero;
@@ -25,6 +25,13 @@ public class Arrow : MonoBehaviour
             StartCoroutine(destroyOnEnemy());
         }
         else if(collide.collider.CompareTag("solidObject")) {
+            rigid = GetComponent<Rigidbody2D>(); 
+            rigid.velocity = Vector2.zero;
+            rigid.angularVelocity = 0;
+            Destroy(GetComponent<BoxCollider2D>());
+            StartCoroutine(destroyLaser());
+        }
+        else if(collide.collider.CompareTag("bullet")) {
             rigid = GetComponent<Rigidbody2D>(); 
             rigid.velocity = Vector2.zero;
             rigid.angularVelocity = 0;
