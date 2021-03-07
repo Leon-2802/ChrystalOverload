@@ -11,6 +11,8 @@ TagManager:
   - bullet
   - movingEnemy
   - coinNumber
+  - levelGeneration
+  - controlChests
   layers:
   - Default
   - TransparentFX

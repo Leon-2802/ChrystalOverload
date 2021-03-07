@@ -12474,6 +12474,7 @@ MonoBehaviour:
   objects:
   - {fileID: 2020288890983487534, guid: f593e279162c4004c9d0dd94a0429e4e, type: 3}
   - {fileID: 4860976007289339746, guid: d974f5ca6b0719b4b8e647375bbc2a70, type: 3}
+  - {fileID: 4860976007289339746, guid: d974f5ca6b0719b4b8e647375bbc2a70, type: 3}
 --- !u!1 &7587004981137502652
 GameObject:
   m_ObjectHideFlags: 0

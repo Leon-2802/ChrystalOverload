@@ -14,12 +14,14 @@ public class levelGeneration : MonoBehaviour
     public float timeBtwRoom;
     public float startTimeBtwRoom = 0.25f;
     public bool stopGeneration = false;
+    public spawnBoss bossScript;
 
     public float minX;
     public float maxX;
     public float maxY;
     public LayerMask room;
     private int downCounter;
+    public int rowCounter = 0;
     public spawnPlayer spawnPly;
 
     void Start()
@@ -87,6 +89,7 @@ public class levelGeneration : MonoBehaviour
         else if (direction == 5) //Move Up
         {
             downCounter++;
+            rowCounter++;
 
             if (transform.position.y < maxY) 
             {
@@ -119,6 +122,13 @@ public class levelGeneration : MonoBehaviour
             }
             else {
                 //Stop level Generation
+                Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
+                if (roomDetection.GetComponent<roomType>().type != 3) {
+                    roomDetection.GetComponent<roomType>().destroyRoom();
+                    GameObject lastRoom = Instantiate(rooms[3], transform.position, Quaternion.identity);
+                    bossScript = lastRoom.GetComponent<spawnBoss>();
+                    bossScript.spawn();
+                }
                 stopGeneration = true;
             }
         }
