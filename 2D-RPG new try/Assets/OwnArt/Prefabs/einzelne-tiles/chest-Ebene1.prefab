@@ -191,3 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chestAnim: {fileID: 2156210635032887421}
+  levelScr: {fileID: 0}
+  chestScr: {fileID: 0}
+  gunPrefab: {fileID: 5678567701740091679, guid: 93ee174ae68e5264da460967fdf111f5,
+    type: 3}

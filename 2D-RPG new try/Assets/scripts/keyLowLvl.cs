@@ -7,17 +7,21 @@ public class keyLowLvl : MonoBehaviour
     public Transform target;
     public Rigidbody2D rb;
     public controlChests storeBool;
+    public messageCtrl MessageCtrl;
     public float floatSpeed;
     private bool inRange = false;
     void Start() 
     {
         target = GameObject.FindWithTag("Player").transform;
         storeBool = GameObject.FindWithTag("controlChests").GetComponent<controlChests>();
+        MessageCtrl = GameObject.FindWithTag("popUp").GetComponent<messageCtrl>();
     }
     void Update() 
     {
         if (Vector2.Distance(target.position, transform.position) <= 0.5) {
             storeBool.keyFound = true;
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.collectItem);
+            MessageCtrl.showMessage("key");
             Destroy(gameObject);
         }
         else if (inRange == true) {

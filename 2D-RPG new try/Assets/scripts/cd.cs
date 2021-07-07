@@ -6,15 +6,20 @@ public class cd : MonoBehaviour
 {
     public Transform target;
     public Rigidbody2D rb;
+    public messageCtrl MessageCtrl;
     public float floatSpeed;
+    [SerializeField] private string objectType = null;
     private bool inRange = false;
     void Start() 
     {
         target = GameObject.FindWithTag("Player").transform;
+        MessageCtrl = GameObject.FindWithTag("popUp").GetComponent<messageCtrl>();
     }
     void Update() 
     {
         if (Vector2.Distance(target.position, transform.position) <= 0.5) {
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.collectItem);
+            MessageCtrl.showMessage(objectType);
             Destroy(gameObject);
         }
         else if (inRange == true) {

@@ -41,16 +41,19 @@ public class newPlyShooting : MonoBehaviour
     {
         // Time.timeScale = 0.1f;
         canShoot = false;
+        soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.shot);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
         rbBullet.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
         normieGunMag--;
         magScript.SetBulletNumber(normieGunMag);
         if(normieGunMag <= 0) {
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.emptyMag);
             magScript.SetMaxBullets(3);
             magScript.SetBulletNumber(0);
             startTimer = true;
             yield return new WaitForSeconds(3.4f);
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.reload);
             magNumber.decreaseNumber();
             startTimer = false;
             reload = 0;

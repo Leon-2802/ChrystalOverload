@@ -18,6 +18,7 @@ public class coin : MonoBehaviour
     {
         if (Vector2.Distance(target.position, transform.position) <= 0.5) {
             addCoinScr.addUp();
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.coin);
             Destroy(gameObject);
         }
         else if (inRange == true) {

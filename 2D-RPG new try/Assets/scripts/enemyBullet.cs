@@ -6,7 +6,7 @@ public class enemyBullet : MonoBehaviour
 {
     public Animator bulletAnim;
     public Rigidbody2D rigid;
-    // Update is called once per frame
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.collider.CompareTag("Player")) {

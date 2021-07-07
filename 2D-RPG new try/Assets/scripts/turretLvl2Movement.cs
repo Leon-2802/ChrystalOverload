@@ -39,6 +39,7 @@ public class turretLvl2Movement : MonoBehaviour
             Destroy(GetComponent<PolygonCollider2D>());
             enemyAnim.SetTrigger("ded");
             ded = true;
+            // soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.enemyDeath);
             StartCoroutine(death());
         }
     }
@@ -84,6 +85,7 @@ public class turretLvl2Movement : MonoBehaviour
         canShoot = false;
         yield return new WaitForSeconds(1.5f);
         if (ded == false) {
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.bigTurret);
             enemyAnim.SetBool("shot", true);
             GameObject bullet1 = Instantiate(bulletPrefab, firePointLeft.position, firePointLeft.rotation);
             Rigidbody2D bullet1Rb = bullet1.GetComponent<Rigidbody2D>();

@@ -7,6 +7,7 @@ public class chestLowLevel : MonoBehaviour
    public Animator chestAnim;
    public levelGeneration levelScr;
    public controlChests chestScr;
+   [SerializeField] private GameObject gunPrefab = null;
    private bool playerInRange;
 
     private void Start() {
@@ -17,8 +18,11 @@ public class chestLowLevel : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && playerInRange == true && chestScr.keyFound == true)  {
             chestAnim.SetTrigger("open");
+            Instantiate(gunPrefab, transform.position, Quaternion.identity);
+        } else if (Input.GetKeyDown(KeyCode.E) && playerInRange == true && chestScr.keyFound == false) {
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
         }
-        else if(levelScr.rowCounter < 2) {
+        if(levelScr.rowCounter < 2) {
             Destroy(gameObject);
         }
     }

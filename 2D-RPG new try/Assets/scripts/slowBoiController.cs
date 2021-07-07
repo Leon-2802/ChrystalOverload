@@ -38,6 +38,7 @@ public class slowBoiController : MonoBehaviour
             enemyAnim.SetTrigger("ded");
             rb.rotation = 0;
             ded = true;
+            // soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.enemyDeath);
             StartCoroutine(death());
         }
     }

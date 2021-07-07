@@ -35,13 +35,14 @@ public class enemyTestMovement : MonoBehaviour
             Destroy(GetComponent<PolygonCollider2D>());
             enemyAnim.SetTrigger("ded");
             ded = true;
+            // soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.enemyDeath);
             StartCoroutine(death());
         }
     }
 
     private void checkDistance()
     {
-        if (Vector2.Distance(target.position, transform.position) < attackRadius || playerFound == true)
+        if (Vector2.Distance(target.position, transform.position) < attackRadius)
         {
             Vector2 lookdir = target.position - transform.position;
             float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg + 90f;
@@ -63,7 +64,6 @@ public class enemyTestMovement : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             enemyCurrentHealth -= 15;
-            playerFound = true;
             enemyHealthbar.SetHealth(enemyCurrentHealth);
             enemyAnim.SetBool("Hurt", true);
             StartCoroutine(backToIdle());
@@ -80,6 +80,7 @@ public class enemyTestMovement : MonoBehaviour
         canShoot = false;
         yield return new WaitForSeconds(1.5f);
         if (ded == false) {
+            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.smallTurret);
             enemyAnim.SetBool("shot", true);
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
